@@ -18,10 +18,8 @@
             <div class="img_box">
                 <img :src= "src[counter]" alt="immagine 1">
                 <div class="dots">
-                    <i class="fas fa-circle"></i>
-                    <i class="fas fa-circle"></i>
-                    <i class="fas fa-circle"></i>
-                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-circle" v-for="(img) in src"></i>
+                   
                 </div>
             </div>
             <i class="fas fa-chevron-left" @click="imgPrec"></i>
