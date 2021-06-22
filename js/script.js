@@ -1,13 +1,24 @@
-let app = new Vue({
+const app = new Vue({
     
     el: '#app',
     
     data:{
-       immagini = ['../img/img1.jpg','../img/img2.jpg','../img/img3.jpg','../img/img4.jpg']
+       src : ['img/img1.jpg','img/img2.jpg','img/img3.jpg','img/img4.jpg'],
+       counter : 0,
+       
     },
 
-    metods:{
+    methods:{
+        imgSucc: function(){
+           
+            if(this.counter >= (this.src.lenght)){
+                this.counter = 0;
 
+            }
+            else{
+                this.counter++;
+            }
+        }
     }
 
 });
