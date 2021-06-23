@@ -7,7 +7,7 @@ const app = new Vue({
        counter : 0,
        
     },
-
+    
     methods:{
         imgSucc: function(){
            

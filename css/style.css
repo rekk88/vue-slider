@@ -3,6 +3,10 @@
     padding: 0;
     margin: 0;
 }
+.blu{
+    color: blue;
+    filter: invert(0) !important;
+}
 /* body > container */
 .container{
     height: 100vh;
@@ -38,6 +42,10 @@
 .dots .fa-circle{
     filter: invert(1);
     margin: 0px 10px;
+}
+.dots .fa-circle:active{
+ color: blue;
+ filter: invert(0);
 }
 .slider .dots{
     position: absolute;
