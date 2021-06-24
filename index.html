@@ -11,9 +11,14 @@
 </head>
 <body>
     <!--container -->
-    <div class="container" id="app">
-        <button @click="stop">Stop</button>
-        <div class="slider" >
+    <div id="app">
+        <i class="far fa-play-circle" @click="slide" v-if ="play"></i>
+        <i class="far fa-stop-circle" @click="stop" v-else></i>
+
+    <div class="container" >
+        <!-- <button @click="stop">Stop</button> -->
+        
+        <div class="slider">
             <i class="fas fa-chevron-right" @click="imgSucc"></i>
 
             <div class="img_box">
@@ -28,7 +33,7 @@
         </div>
 
     </div>
-
+    </div>
     <script src="js/script.js"></script>
     
 </body>

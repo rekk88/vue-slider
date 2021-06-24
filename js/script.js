@@ -5,9 +5,10 @@ const app = new Vue({
     data:{
        src : ['img/img1.jpg','img/img2.jpg','img/img3.jpg','img/img4.jpg'],
        counter : 0,
+       play : false,
     },
     mounted() {
-        this.slide();
+        // this.slide();
     },    
     methods:{
         imgSucc: function(){
@@ -31,6 +32,12 @@ const app = new Vue({
                 this.counter--;
             }
         },
+        slide(){
+            handle = setInterval(this.avviso , 4000);
+            // setInterval(function(){
+            //     alert("sono passati 3 secondi")
+            // },3000);
+        },
         stop(){
             clearInterval(handle);
             console.log("ciao");
@@ -40,12 +47,7 @@ const app = new Vue({
             this.imgSucc();
         },
 
-        slide(){
-            handle = setInterval(this.avviso , 4000);
-            // setInterval(function(){
-            //     alert("sono passati 3 secondi")
-            // },3000);
-        },
+        
 
     }
 

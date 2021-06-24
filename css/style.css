@@ -8,8 +8,14 @@
     filter: invert(0) !important;
 }
 /* body > container */
-.container{
+#app{
     height: 100vh;
+    text-align: center;
+}
+.fa-play-circle{
+    font-size: 3em;
+}
+.container{
     width: 80%;
     margin: auto;
     display: flex;
