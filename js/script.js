@@ -5,7 +5,6 @@ const app = new Vue({
     data:{
        src : ['img/img1.jpg','img/img2.jpg','img/img3.jpg','img/img4.jpg'],
        counter : 0,
-       
     },
     mounted() {
         this.slide();
@@ -32,12 +31,17 @@ const app = new Vue({
                 this.counter--;
             }
         },
-        
-        avviso(){
-            alert("sono passati 3 secondi");
+        stop(){
+            clearInterval(handle);
+            console.log("ciao");
         },
+        avviso(){
+            // alert("sono passati 4 secondi");
+            this.imgSucc();
+        },
+
         slide(){
-            setTimeout(this.avviso , 3000);
+            handle = setInterval(this.avviso , 4000);
             // setInterval(function(){
             //     alert("sono passati 3 secondi")
             // },3000);
