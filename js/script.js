@@ -7,7 +7,9 @@ const app = new Vue({
        counter : 0,
        
     },
-    
+    mounted() {
+        this.slide();
+    },    
     methods:{
         imgSucc: function(){
            
@@ -29,7 +31,18 @@ const app = new Vue({
             else{
                 this.counter--;
             }
-        }
+        },
+        
+        avviso(){
+            alert("sono passati 3 secondi");
+        },
+        slide(){
+            setTimeout(this.avviso , 3000);
+            // setInterval(function(){
+            //     alert("sono passati 3 secondi")
+            // },3000);
+        },
+
     }
 
 });
